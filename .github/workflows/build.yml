@@ -1,0 +1,29 @@
+name: Build website
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Build website
+        run: |
+          mkdir -p dist
+          cp src/index.html src/styles.css dist/
+          echo "Generated build files:"
+          find dist -maxdepth 2 -type f
+
+      - name: Upload website artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-build
+          path: build/
+          if-no-files-found: warn
