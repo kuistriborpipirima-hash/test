@@ -1,0 +1,21 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color: #17243b;
+  background: #edf2f8;
+}
+body { margin: 0; padding: 64px 24px; }
+main {
+  max-width: 680px;
+  margin: auto;
+  padding: 36px;
+  background: white;
+  border-top: 8px solid #2563eb;
+  border-radius: 12px;
+  box-shadow: 0 12px 36px #17243b12;
+}
+.eyebrow { color: #2563eb; font-weight: 700; letter-spacing: .12em; }
+h1 { font-size: 2.4rem; margin: 16px 0; }
+p { line-height: 1.6; }
+dt { font-weight: 700; margin-top: 20px; }
+dd { margin: 6px 0 0; font-family: monospace; }
+.check { margin-top: 28px; padding: 16px; background: #eff6ff; }
